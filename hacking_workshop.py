@@ -10,7 +10,7 @@ candidatesFromFacebook = ["https://graph.facebook.com/459003187504945/likes?limi
 candidates = []
 
 for candidatesFromPost in candidatesFromFacebook:
-  candidatesJson = json.load(urllib2.urlopen(candidatesFromPost))
+candidatesJson = json.load(urllib2.urlopen(candidatesFromPost))
 	for candidatesNumber in range(len(candidatesJson["data"])):
 		nameOfCandidate = candidatesJson["data"][candidatesNumber]["name"]
 		candidates.append(nameOfCandidate)
